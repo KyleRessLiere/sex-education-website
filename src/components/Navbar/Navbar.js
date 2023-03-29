@@ -4,7 +4,9 @@ import Link from "next/link";
 function Navbar() {
   return (
     <div className="navbar">
-      <img src="nav-icon.png" alt="nav-ico" className="nav-logo" />
+      <Link href="/">
+        <img src="nav-icon.png" alt="nav-ico" className="nav-logo" />
+      </Link>
       <div className="nav-buttons">
         <button className="nav-button">About</button>
         <Link href="/history">
