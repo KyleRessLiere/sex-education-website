@@ -24,6 +24,7 @@
   margin-right: 3px; /* Reduce the margin between the buttons */
   font-size: 24px;
   font-weight: bold;
+  font-family: "Oswald", sans-serif; /* Add this line to set the font */
   cursor: pointer;
   padding: 10px 20px;
 }
