@@ -2,7 +2,7 @@ import Head from "next/head";
 import "@/styles/globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../components/Navbar/Navbar.css";
-
+import "../components/Landing/Landing.css";
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"

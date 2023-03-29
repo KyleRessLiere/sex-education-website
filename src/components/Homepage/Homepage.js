@@ -4,12 +4,12 @@ import Container from "react-bootstrap/Container";
 import Link from "next/link";
 import WhatWeDo from "./WhatWeDo";
 import Navbar from "../Navbar/Navbar";
-
+import Landing from "../Landing/Landing";
 function Homepage() {
   return (
     <div>
       <Navbar />
-      <WhatWeDo />
+      <Landing />
     </div>
   );
 }
