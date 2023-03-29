@@ -2,11 +2,12 @@
   display: flex;
   align-items: flex-end;
   background-color: white;
+  height: 120px;
 }
 
 .nav-logo {
-  max-width: 80px;
-  max-height: 80px;
+  max-width: 100px;
+  max-height: 100px;
   padding-left: 20px;
 }
 
@@ -20,10 +21,11 @@
   color: #e1730d;
   background-color: white;
   border: none;
-  margin-right: 10px;
-  font-size: 16px;
+  margin-right: 3px; /* Reduce the margin between the buttons */
+  font-size: 24px;
   font-weight: bold;
   cursor: pointer;
+  padding: 10px 20px;
 }
 
 .nav-button:hover {
