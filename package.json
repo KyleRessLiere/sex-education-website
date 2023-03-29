@@ -1,5 +1,5 @@
 {
-  "name": "sex-education-website",
+  "name": "monroe-consulting",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,9 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/font": "13.1.5",
-    "next": "13.1.5",
+    "@next/font": "13.1.2",
+    "bootstrap": "^5.2.3",
+    "eslint": "8.31.0",
+    "eslint-config-next": "13.1.2",
+    "next": "13.1.2",
     "react": "18.2.0",
+    "react-bootstrap": "^2.7.0",
     "react-dom": "18.2.0"
   }
 }
