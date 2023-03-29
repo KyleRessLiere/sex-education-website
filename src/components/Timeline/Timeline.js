@@ -1,6 +1,82 @@
 import React from "react";
 
 function Timeline() {
+  const data = [
+    {
+      id: 1,
+      subtitle: "Subtitle",
+      title: "Technology",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.",
+      imgUrl: "http://placehold.it/1000x500",
+      color: "#46b8e9",
+    },
+    {
+      id: 2,
+      subtitle: "Subtitle",
+      title: "Technology",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.",
+      imgUrl: "http://placehold.it/1000x500",
+      color: "#46b8e9",
+    },
+    {
+      id: 3,
+      subtitle: "Subtitle",
+      title: "Technology",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.",
+      imgUrl: "http://placehold.it/1000x500",
+      color: "#46b8e9",
+    },
+    {
+      id: 4,
+      subtitle: "Subtitle",
+      title: "Technology",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.",
+      imgUrl: "http://placehold.it/1000x500",
+      color: "#46b8e9",
+    },
+    {
+      id: 5,
+      subtitle: "Subtitle",
+      title: "Technology",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.",
+      imgUrl: "http://placehold.it/1000x500",
+      color: "#46b8e9",
+    },
+    {
+      id: 6,
+      subtitle: "Subtitle",
+      title: "Technology",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.",
+      imgUrl: "http://placehold.it/1000x500",
+      color: "#46b8e9",
+    },
+    {
+      id: 7,
+      subtitle: "Subtitle",
+      title: "Technology",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.",
+      imgUrl: "http://placehold.it/1000x500",
+      color: "#46b8e9",
+    },
+    {
+      id: 8,
+      subtitle: "Subtitle",
+      title: "Technology",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.",
+      imgUrl: "http://placehold.it/1000x500",
+      color: "#46b8e9",
+    },
+    // ... Add more objects for each card
+  ];
+
   return (
     <div>
       <section id="timeline">
@@ -10,100 +86,29 @@ function Timeline() {
           large screens.
         </p>
         <div className="demo-card-wrapper">
-          <div className="demo-card demo-card--step1">
-            <div className="head">
-              <div className="number-box">
-                <span>01</span>
+          {data.map((item, index) => (
+            <div
+              key={item.id}
+              className={`demo-card demo-card--step${item.id}`}
+              style={{
+                order: index + 1,
+                backgroundColor: item.color,
+              }}
+            >
+              <div className="head">
+                <div className="number-box">
+                  <span>{item.id.toString().padStart(2, "0")}</span>
+                </div>
+                <h2>
+                  <span className="small">{item.subtitle}</span> {item.title}
+                </h2>
               </div>
-              <h2>
-                <span className="small">Subtitle</span> Technology
-              </h2>
-            </div>
-            <div className="body">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta
-                reiciendis deserunt doloribus consequatur, laudantium odio
-                dolorum laboriosam.
-              </p>
-              <img src="http://placehold.it/1000x500" alt="Graphic" />
-            </div>
-          </div>
-
-          <div className="demo-card demo-card--step2">
-            <div className="head">
-              <div className="number-box">
-                <span>02</span>
+              <div className="body">
+                <p>{item.description}</p>
+                <img src={item.imgUrl} alt="Graphic" />
               </div>
-              <h2>
-                <span className="small">Subtitle</span> Confidence
-              </h2>
             </div>
-            <div className="body">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta
-                reiciendis deserunt doloribus consequatur, laudantium odio
-                dolorum laboriosam.
-              </p>
-              <img src="http://placehold.it/1000x500" alt="Graphic" />
-            </div>
-          </div>
-
-          <div className="demo-card demo-card--step3">
-            <div className="head">
-              <div className="number-box">
-                <span>03</span>
-              </div>
-              <h2>
-                <span className="small">Subtitle</span> Adaptation
-              </h2>
-            </div>
-            <div className="body">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta
-                reiciendis deserunt doloribus consequatur, laudantium odio
-                dolorum laboriosam.
-              </p>
-              <img src="http://placehold.it/1000x500" alt="Graphic" />
-            </div>
-          </div>
-
-          <div className="demo-card demo-card--step4">
-            <div className="head">
-              <div className="number-box">
-                <span>04</span>
-              </div>
-              <h2>
-                <span className="small">Subtitle</span> Consistency
-              </h2>
-            </div>
-            <div className="body">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta
-                reiciendis deserunt doloribus consequatur, laudantium odio
-                dolorum laboriosam.
-              </p>
-              <img src="http://placehold.it/1000x500" alt="Graphic" />
-            </div>
-          </div>
-
-          <div className="demo-card demo-card--step5">
-            <div className="head">
-              <div className="number-box">
-                <span>05</span>
-              </div>
-              <h2>
-                <span className="small">Subtitle</span> Conversion
-              </h2>
-            </div>
-            <div className="body">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta
-                reiciendis deserunt doloribus consequatur, laudantium odio
-                dolorum laboriosam.
-              </p>
-              <img src="http://placehold.it/1000x500" alt="Graphic" />
-            </div>
-          </div>
+          ))}
         </div>
       </section>
     </div>

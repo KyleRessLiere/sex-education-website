@@ -24,25 +24,6 @@
     box-shadow: 0px 0px 2px 8px #f7f7f7;
   }
 }
-/* Some Cool Stuff */
-.demo-card:nth-child(1) {
-  order: 1;
-}
-.demo-card:nth-child(2) {
-  order: 4;
-}
-.demo-card:nth-child(3) {
-  order: 2;
-}
-.demo-card:nth-child(4) {
-  order: 5;
-}
-.demo-card:nth-child(5) {
-  order: 3;
-}
-.demo-card:nth-child(6) {
-  order: 6;
-}
 /* Border Box */
 * {
   box-sizing: border-box;
@@ -72,15 +53,9 @@ body {
 #timeline .demo-card-wrapper {
   position: relative;
   margin: auto;
-}
-@media (min-width: 1000px) {
-  #timeline .demo-card-wrapper {
-    display: flex;
-    flex-flow: column wrap;
-    width: 1170px;
-    height: 1650px;
-    margin: 0 auto;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 #timeline .demo-card-wrapper::after {
   z-index: 1;
@@ -102,6 +77,10 @@ body {
   margin: 10px auto 80px;
   max-width: 94%;
   z-index: 2;
+  flex-basis: calc(50% - 20px);
+  margin: 10px;
+  max-width: 450px;
+  height: 400px;
 }
 @media (min-width: 480px) {
   #timeline .demo-card {
@@ -112,40 +91,6 @@ body {
 @media (min-width: 720px) {
   #timeline .demo-card {
     max-width: 40%;
-  }
-}
-@media (min-width: 1000px) {
-  #timeline .demo-card {
-    max-width: 450px;
-    height: 400px;
-    margin: 90px;
-    margin-top: 45px;
-    margin-bottom: 45px;
-  }
-  #timeline .demo-card:nth-child(odd) {
-    margin-right: 45px;
-  }
-  #timeline .demo-card:nth-child(odd) .head::after {
-    border-left-width: 15px;
-    border-left-style: solid;
-    left: 100%;
-  }
-  #timeline .demo-card:nth-child(odd) .head::before {
-    left: 491.5px;
-  }
-  #timeline .demo-card:nth-child(even) {
-    margin-left: 45px;
-  }
-  #timeline .demo-card:nth-child(even) .head::after {
-    border-right-width: 15px;
-    border-right-style: solid;
-    right: 100%;
-  }
-  #timeline .demo-card:nth-child(even) .head::before {
-    right: 489.5px;
-  }
-  #timeline .demo-card:nth-child(2) {
-    margin-top: 180px;
   }
 }
 #timeline .demo-card .head {
@@ -208,7 +153,7 @@ body {
 }
 #timeline .demo-card .body img {
   display: block;
-  width: 100%;
+  width: 50%;
 }
 #timeline .demo-card--step1 {
   background-color: #46b8e9;
