@@ -1,117 +1,96 @@
 import React from "react";
-
 function Timeline() {
-  const data = [
+  const timelineData = [
     {
       id: 1,
-      subtitle: "Subtitle",
-      title: "Technology",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.",
-      imgUrl: "http://placehold.it/1000x500",
-      color: "#46b8e9",
+      title: "Title",
+      date: "1 MAY 2016",
+      description: "1",
     },
     {
       id: 2,
-      subtitle: "Subtitle",
-      title: "Technology",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.",
-      imgUrl: "http://placehold.it/1000x500",
-      color: "#46b8e9",
+      title: "Card Title",
+      date: "25 MAY 2016",
+      description: "2",
+      isCard: true,
     },
     {
       id: 3,
-      subtitle: "Subtitle",
-      title: "Technology",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.",
-      imgUrl: "http://placehold.it/1000x500",
-      color: "#46b8e9",
+      quote:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta explicabo debitis omnis dolor iste fugit totam quasi inventore!",
+      date: "3 JUN 2016",
     },
     {
       id: 4,
-      subtitle: "Subtitle",
-      title: "Technology",
+      title: "Title",
+      date: "22 JUN 2016",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.",
-      imgUrl: "http://placehold.it/1000x500",
-      color: "#46b8e9",
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.",
     },
     {
       id: 5,
-      subtitle: "Subtitle",
-      title: "Technology",
+      title: "Card Title",
+      date: "10 JULY 2016",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.",
-      imgUrl: "http://placehold.it/1000x500",
-      color: "#46b8e9",
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepeatque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.",
+      isCard: true,
     },
     {
       id: 6,
-      subtitle: "Subtitle",
-      title: "Technology",
+      title: "Card Title",
+      date: "30 JULY 2016",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.",
-      imgUrl: "http://placehold.it/1000x500",
-      color: "#46b8e9",
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.",
+      isCard: true,
     },
     {
       id: 7,
-      subtitle: "Subtitle",
-      title: "Technology",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.",
-      imgUrl: "http://placehold.it/1000x500",
-      color: "#46b8e9",
+      quote:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta explicabo debitis omnis dolor iste fugit totam quasi inventore!",
+      date: "5 AUG 2016",
     },
     {
       id: 8,
-      subtitle: "Subtitle",
-      title: "Technology",
+      title: "Card Title",
+      date: "19 AUG 2016",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.",
-      imgUrl: "http://placehold.it/1000x500",
-      color: "#46b8e9",
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.",
+      isCard: true,
     },
-    // ... Add more objects for each card
   ];
-
   return (
-    <div>
-      <section id="timeline">
-        <h1>A Flexbox Timeline</h1>
-        <p className="leader">
-          All cards must be the same height and width for space calculations on
-          large screens.
-        </p>
-        <div className="demo-card-wrapper">
-          {data.map((item, index) => (
-            <div
-              key={item.id}
-              className={`demo-card demo-card--step${item.id}`}
-              style={{
-                order: index + 1,
-                backgroundColor: item.color,
-              }}
-            >
-              <div className="head">
-                <div className="number-box">
-                  <span>{item.id.toString().padStart(2, "0")}</span>
-                </div>
-                <h2>
-                  <span className="small">{item.subtitle}</span> {item.title}
-                </h2>
-              </div>
-              <div className="body">
-                <p>{item.description}</p>
-                <img src={item.imgUrl} alt="Graphic" />
+    <>
+      <header>
+        <div className="container text-center">
+          <h1>Vertical Timeline</h1>
+          <p>Sava Lazic</p>
+        </div>
+      </header>
+      <section className="timeline">
+        <div className="container">
+          {timelineData.map((item) => (
+            <div className="timeline-item" key={item.id}>
+              <div className="timeline-img"></div>
+              <div
+                className={`timeline-content ${
+                  item.isCard
+                    ? "timeline-card js--fadeInRight"
+                    : "js--fadeInLeft"
+                }`}
+              >
+                {item.title && <h2>{item.title}</h2>}
+                {item.date && <div className="date">{item.date}</div>}
+                {item.description && <p>{item.id}</p>}
+                {item.quote && <blockquote>{item.quote}</blockquote>}
+                <a className="bnt-more" href="javascript:void(0)">
+                  More
+                </a>
               </div>
             </div>
           ))}
         </div>
       </section>
-    </div>
+    </>
   );
 }
 
