@@ -62,8 +62,7 @@ function Timeline() {
     <>
       <header>
         <div className="container text-center">
-          <h1>Vertical Timeline</h1>
-          <p>Sava Lazic</p>
+          <h1>Sex Timeline</h1>
         </div>
       </header>
       <section className="timeline">

@@ -13,7 +13,9 @@ function Navbar() {
           <button className="nav-button">The History</button>
         </Link>
         <button className="nav-button">Advocacy Work</button>
-        <button className="nav-button">In Your State</button>
+        <Link href="/map">
+          <button className="nav-button">In Your State</button>
+        </Link>
       </div>
     </div>
   );

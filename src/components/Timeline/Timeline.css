@@ -3,7 +3,7 @@
 }
 .timeline::before {
   content: "";
-  background: #c5cae9;
+  background: #27a3b9;
   width: 5px;
   height: 95%;
   position: absolute;
@@ -19,7 +19,9 @@
   padding: 40px 30px 10px 30px;
 }
 .timeline-item:nth-child(even) .timeline-content .date {
-  right: auto;
+  left: 0;
+}
+.timeline-item:nth-child(odd) .timeline-content .date {
   left: 0;
 }
 .timeline-item:nth-child(even) .timeline-content::after {
@@ -60,7 +62,7 @@
 .timeline-img {
   width: 30px;
   height: 30px;
-  background: #3f51b5;
+  background: #27a3b9;
   border-radius: 50%;
   position: absolute;
   left: 50%;
@@ -68,7 +70,7 @@
   margin-left: -15px;
 }
 .bnt-more {
-  background: #3f51b5;
+  background: #e1730d;
   color: #fff;
   padding: 8px 20px;
   text-transform: uppercase;
@@ -120,7 +122,7 @@ blockquote {
   padding: 0 20px;
 }
 .date {
-  background: #ff4081;
+  background: #ba2843;
   display: inline-block;
   color: #fff;
   padding: 10px;
