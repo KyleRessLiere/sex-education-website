@@ -5,12 +5,20 @@ import Navbar from "../Navbar/Navbar";
 const StateModal = ({ stateInfo, onClose }) => {
   if (!stateInfo) return null;
 
+  const handleModalClick = (e) => {
+    if (e.target.classList.contains("modal")) {
+      onClose();
+    }
+  };
+
   return (
-    <div className="modal">
+    <div className="modal" onClick={handleModalClick}>
       <div className="modal-content">
         <h2>{stateInfo.title}</h2>
         <p>{stateInfo.description}</p>
-        <button onClick={onClose}>Close</button>
+        <button className="close-button" onClick={onClose}>
+          ×
+        </button>
       </div>
     </div>
   );

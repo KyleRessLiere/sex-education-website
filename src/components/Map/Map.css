@@ -31,7 +31,16 @@ path:hover::before {
 .modal-content {
   background-color: white;
   padding: 2rem;
-  border-radius: 8px;
-  max-width: 80%;
-  overflow: auto;
+  position: relative;
+  width: 80%;
+}
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
