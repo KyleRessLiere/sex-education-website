@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../components/Navbar/Navbar.css";
 import "../components/Landing/Landing.css";
 import "../components/Timeline/Timeline.css";
+import "../components/Map/Map.css";
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
