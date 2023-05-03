@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 function Timeline() {
   const timelineData = [
     {
@@ -287,20 +287,23 @@ function Timeline() {
   const [showModal, setShowModal] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
 
-  const handleModal = () => {
-    setShowModal(!showModal);
+  const handleOpenModal = (item) => {
+    setSelectedItem(item);
+    setShowModal(true);
   };
 
-  const handleOpenModal = (item) => {
-    setShowModal(true);
-    setSelectedItem(item);
+  const handleModal = (event) => {
+    if (event.target.classList.contains("timeline-modal")) {
+      setShowModal(false);
+      setSelectedItem(null);
+    }
   };
 
   return (
     <>
       <header>
         <div className="container text-center">
-          <h1 className="title">U.S Sex Education Timeline</h1>
+          <h1 className="title">United States Sex Education Timeline</h1>
         </div>
       </header>
       <section className="timeline">
@@ -326,9 +329,12 @@ function Timeline() {
                 )}
 
                 {showModal && selectedItem && (
-                  <div className="timeline-modal">
+                  <div className="timeline-modal" onClick={handleModal}>
                     <div className="modal-content">
-                      <span className="close-button" onClick={handleModal}>
+                      <span
+                        className="close-button"
+                        onClick={() => setShowModal(false)}
+                      >
                         &times;
                       </span>
                       <h2>{selectedItem.date}</h2>
