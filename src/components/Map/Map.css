@@ -15,6 +15,9 @@ path:hover::before {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #27a3b9;
+  padding-bottom: 1.25%;
+  padding-top: 2%;
 }
 .modal {
   position: fixed;
