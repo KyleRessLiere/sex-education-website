@@ -35,3 +35,7 @@
   -webkit-mask-image: linear-gradient(-75deg, black 60%, transparent 60%);
   mask-image: linear-gradient(-75deg, black 60%, transparent 60%);
 }
+
+.about-img {
+  width: 100%;
+}

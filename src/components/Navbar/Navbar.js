@@ -8,11 +8,12 @@ function Navbar() {
         <img src="nav-icon.png" alt="nav-ico" className="nav-logo" />
       </Link>
       <div className="nav-buttons">
-        <button className="nav-button">About</button>
+        <Link href="/about">
+          <button className="nav-button">About</button>
+        </Link>
         <Link href="/history">
           <button className="nav-button">The History</button>
         </Link>
-        <button className="nav-button">Advocacy Work</button>
         <Link href="/map">
           <button className="nav-button">In Your State</button>
         </Link>

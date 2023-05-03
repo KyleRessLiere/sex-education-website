@@ -36,7 +36,26 @@ function Timeline() {
     {
       id: 5,
       date: "1920s. Attitudes about sex education begin to change",
-      quote: "During the 1920s, attitudes about sexuality began to loosen",
+      quote:
+        "During the 1920s, attitudes about sexuality began to loosen. The U.S. Public Health Service distributed sex education materials to schools. Young women began to receive formal sex education in the form of “marital adjustment” classes.",
+      image: "Card5.jpeg",
+      more: 'The 1920s marked a turning point in attitudes about sex education in the United States. The U.S. Public Health Service distributed sex education materials to schools, and formal sex education programs, such as "marital adjustment" classes, began to emerge. However, these programs were typically limited to young women and focused primarily on preparing them for marriage rather than promoting sexual health and wellbeing for all individuals.',
+    },
+    {
+      id: 6,
+      date: "1930s. Marital Adjustment Classes spread to college campuses",
+      quote:
+        "By the 1930s, marital adjustment classes continued to spread across college campuses and discussion of interracial marriages is introduced in class. However, racism persists in sex education.",
+      image: "Card6.jpeg",
+      more: "During the 1930s, marital adjustment classes continued to gain popularity and spread to college campuses, with a focus on preparing young people for marriage. However, racism persisted in sex education, and discussions of interracial marriages were often framed in a negative light, perpetuating harmful stereotypes and discrimination.",
+    },
+    {
+      id: 7,
+      date: "1940. Sexuality Education becomes an “urgent need.”",
+      quote:
+        "The U.S. Public Health Service declared sexuality education in public schools an “urgent need” during WWII, when public concern about STIs among soldiers began to increase once more.",
+      image: "Card7.jpeg",
+      more: 'During World War II, public concern about sexually transmitted infections (STIs) among soldiers increased, prompting the U.S. Public Health Service to declare sexuality education in public schools an "urgent need." This marked a significant step forward in recognizing the importance of comprehensive sex education in promoting sexual health and wellbeing for all individuals.',
     },
     {
       id: 8,
@@ -74,9 +93,9 @@ function Timeline() {
       id: 12,
       date: "1981. The HIV/AIDS crisis increases sex education efforts.",
       quote:
-        "The HIV/AIDS crisis of the 1980s led to increased efforts to put sex education curricula in school. The U.S. public health service launched one of the largest campaigns in American history to educate public",
+        "The HIV/AIDS crisis of the 1980s led to increased efforts to put sex education curricula in school. The U.S. public health service launched one of the largest campaigns in American history to educate the public about the risks of HIV and the importance of safe sex practices. Sex education programs in schools began to focus more on the prevention of sexually transmitted infections and the promotion of safer sex practices.",
       image: "Card12.jpeg",
-      more: "",
+      more: "The HIV/AIDS crisis was a turning point in sex education policy in the United States. The urgency of the epidemic led to increased public awareness of the importance of sex education and the need for comprehensive information about sexual health. The HIV/AIDS crisis also highlighted the need to address health disparities faced by marginalized communities, including people of color, LGBTQ+ individuals, and people living in poverty. As a result, many sex education programs began to focus more on issues of diversity and inclusion, and advocates pushed for policies that ensured all students had access to accurate and comprehensive information.",
     },
     {
       id: 13,
@@ -281,7 +300,7 @@ function Timeline() {
     <>
       <header>
         <div className="container text-center">
-          <h1 className="title">Sex Timeline</h1>
+          <h1 className="title">U.S Sex Education Timeline</h1>
         </div>
       </header>
       <section className="timeline">
