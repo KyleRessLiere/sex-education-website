@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 function Timeline() {
   const timelineData = [
     {
@@ -240,6 +240,11 @@ function Timeline() {
       image: "Card34.jpeg",
     },
   ];
+  const [showModal, setShowModal] = useState(false);
+
+  const handleModal = () => {
+    setShowModal(!showModal);
+  };
   return (
     <>
       <header>
@@ -263,9 +268,20 @@ function Timeline() {
                 {item.date && <div className="date">{item.date}</div>}
                 {item.description && <p>{item.id}</p>}
                 {item.quote && <blockquote>{item.quote}</blockquote>}
-                <a className="bnt-more" href="javascript:void(0)">
+                <a className="bnt-more" onClick={handleModal}>
                   More
                 </a>
+
+                {showModal && (
+                  <div className="timeline-modal">
+                    <div className="modal-content">
+                      <span className="close-button" onClick={handleModal}>
+                        &times;
+                      </span>
+                      <p>Modal content goes here...</p>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           ))}

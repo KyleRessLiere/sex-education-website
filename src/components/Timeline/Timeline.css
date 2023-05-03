@@ -168,3 +168,42 @@ blockquote {
   right: 0;
   padding-top: 10%;
 }
+/* ...existing CSS... */
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #27a3b9;
+  padding-bottom: 1.25%;
+  padding-top: 2%;
+}
+
+.timeline-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(64, 64, 64, 0.03);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 2rem;
+  position: relative;
+  width: 80%;
+}
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
